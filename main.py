@@ -28,21 +28,33 @@ while True:
     choice = input("Enter your choice (1-6): ")
 
     if choice == '1':
-        # https://www.w3schools.com/python/python_lists_access.asp
+        x = input("Ievadi skitli: ") 
+        print(apartments[int(x)])
         pass
     elif choice == '2':
-        # https://www.w3schools.com/python/python_lists_sort.asp
+        def prices(n):
+            return int(n[8])
+        apartments.sort(key = prices, reverse=True)
+        print(apartments[:10])
         pass
     elif choice == '3':
-        # https://www.w3schools.com/python/python_lists_sort.asp
+        def prices(n):
+            return int(n[8])
+        apartments.sort(key = prices, reverse=False)
+        print(apartments[:10])
         pass
     elif choice == '4':
-        # https://www.w3schools.com/python/python_lists_comprehension.asp
-        # https://www.w3schools.com/python/python_lists_access.asp - Range of Indexes
+        apa = input("Ievadi summu: ")
+        def prices(n):
+            return int(n[8])
+        apartments.sort(key = prices, reverse=False)
+        for apartment in apartments:  
+                 
+            print(apartment[:20]) 
         pass
     elif choice == '5':
-        # https://www.w3schools.com/python/python_lists_comprehension.asp
-        # https://www.w3schools.com/python/python_lists_access.asp - Range of Indexes
+        x = input("Ievadi summu: ")
+        print(apartments[:20])
         pass
 
     elif choice == '6':
