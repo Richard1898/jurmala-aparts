@@ -25,7 +25,7 @@ while True:
     print("6. -- Filter of your choice --")
     print("7. Exit")
 
-    choice = input("Enter your choice (1-6): ")
+    choice = input("Enter your choice (1-7): ")
 
     if choice == '1':
         x = input("Ievadi skitli: ") 
@@ -44,21 +44,27 @@ while True:
         print(apartments[:10])
         pass
     elif choice == '4':
-        apa = input("Ievadi summu: ")
-        def prices(n):
-            return int(n[8])
-        apartments.sort(key = prices, reverse=False)
-        for apartment in apartments:  
-                 
-            print(apartment[:20]) 
-        pass
+        newlist = []
+        max_price = int(input("Max price: "))
+        for apartment in apartments:
+            if int(apartment[8]) < max_price:
+                newlist.append(apartment)
+        print(newlist[:20])
     elif choice == '5':
-        x = input("Ievadi summu: ")
-        print(apartments[:20])
-        pass
+        newlist = []
+        max_price = int(input("Min price: "))
+        for apartment in apartments:
+            if int(apartment[8]) > max_price:
+                newlist.append(apartment)
+        print(newlist[:20])
 
     elif choice == '6':
-        # 
+        newlist = []
+        max_price = int(input("Max price: "))
+        for apartment in apartments:
+            if int(apartment[8]) == max_price:
+                newlist.append(apartment)
+        print(newlist[:20])
         pass
     elif choice == '7':
         print("Exiting")
